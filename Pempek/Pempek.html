@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pempek Jeol</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background: white;
+  padding: 20px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.logo span {
+  color: red;
+}
+
+/* Navigation */
+.navmenu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navmenu a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  position: relative;
+}
+
+.navmenu a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: red;
+  left: 0;
+  bottom: -6px;
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 0;
+  background: #eeeeee;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hero Text */
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 450px;
+  max-width: 100%;
+}/* Floating animation */
+.hero-image img {
+  width: 450px;
+  max-width: 100%;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}/* ================= MENU SECTION ================= */
+
+.menu-section {
+  padding: 80px 0;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.menu-subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.menu-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.menu-title span {
+  color: red;
+}
+
+/* Tabs */
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.menu-tabs button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  position: relative;
+  color: #444;
+}
+
+.menu-tabs button.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: red;
+  left: 0;
+  bottom: 0;
+}
+
+/* Category Title */
+.menu-category {
+  font-size: 20px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.menu-category span {
+  display: block;
+  font-size: 28px;
+  color: red;
+  margin-top: 5px;
+}
+
+/* Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+/* Menu Item */
+.menu-item img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.menu-item h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.menu-item p {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 600;
+  color: red;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">
+        <h1>Pempek Jeol<span>.</span></h1>
+      </div>
+
+      <nav class="navmenu">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+
+      <div class="hero-text">
+        <h1>
+          Cita Rasa Asli <br>
+          Harga Bersahabat
+        </h1>
+        <p>Pempek & Batagor Favorit Semua Orang</p>
+      </div>
+
+      <div class="hero-image">
+        <img src="pempek2.png" alt="Pempek">
+      </div>
+
+    </div>
+<section class="menu-section" id="menu">
+
+  <div class="container">
+
+    <p class="menu-subtitle">OUR MENU</p>
+    <h2 class="menu-title">Check Our <span>Yummy Menu</span></h2>
+
+    <!-- Tabs -->
+    <div class="menu-tabs">
+      <button class="active" data-filter="starters">Starters</button>
+      <button data-filter="breakfast">Breakfast</button>
+      <button data-filter="lunch">Lunch</button>
+      <button data-filter="dinner">Dinner</button>
+    </div>
+
+    <h3 class="menu-category">Menu <span>Starters</span></h3>
+
+    <!-- Menu Grid -->
+    <div class="menu-grid">
+
+      <!-- STARTERS -->
+      <div class="menu-item" data-category="starters">
+        <img src="assets/img/menu1.png" alt="">
+        <h4>Magnam Tiste</h4>
+        <p>Lorem, deren, trataro, filede, nerada</p>
+        <span class="price">$5.95</span>
+      </div>
+
+      <div class="menu-item" data-category="starters">
+        <img src="assets/img/menu2.png" alt="">
+        <h4>Aut Luia</h4>
+        <p>Lorem, deren, trataro, filede, nerada</p>
+        <span class="price">$14.95</span>
+      </div>
+
+      <div class="menu-item" data-category="starters">
+        <img src="assets/img/menu3.png" alt="">
+        <h4>Est Eligendi</h4>
+        <p>Lorem, deren, trataro, filede, nerada</p>
+        <span class="price">$8.95</span>
+      </div>
+
+      <!-- BREAKFAST -->
+      <div class="menu-item" data-category="breakfast">
+        <img src="assets/img/menu4.png" alt="">
+        <h4>Breakfast Special</h4>
+        <p>Lorem, deren, trataro, filede, nerada</p>
+        <span class="price">$9.95</span>
+      </div>
+
+      <div class="menu-item" data-category="breakfast">
+        <img src="assets/img/menu5.png" alt="">
+        <h4>Morning Delight</h4>
+        <p>Lorem, deren, trataro, filede, nerada</p>
+        <span class="price">$11.95</span>
+      </div>
+
+      <!-- LUNCH -->
+      <div class="menu-item" data-category="lunch">
+        <img src="assets/img/menu6.png" alt="">
+        <h4>Lunch Combo</h4>
+        <p>Lorem, deren, trataro, filede, nerada</p>
+        <span class="price">$12.95</span>
+      </div>
+
+      <!-- DINNER -->
+      <div class="menu-item" data-category="dinner">
+        <img src="assets/img/menu1.png" alt="">
+        <h4>Dinner Feast</h4>
+        <p>Lorem, deren, trataro, filede, nerada</p>
+        <span class="price">$18.95</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll(".menu-tabs button");
+  const items = document.querySelectorAll(".menu-item");
+  const categoryTitle = document.querySelector(".menu-category span");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+
+      tabs.forEach(btn => btn.classList.remove("active"));
+      tab.classList.add("active");
+
+      const filter = tab.getAttribute("data-filter");
+      categoryTitle.textContent = filter.charAt(0).toUpperCase() + filter.slice(1);
+
+      items.forEach(item => {
+        if (item.getAttribute("data-category") === filter) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+
+    });
+  });
+</script>
+
+
+</body>
+</html>
